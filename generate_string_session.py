@@ -1,7 +1,8 @@
 from pyrogram import Client
+api_id = int(input("Enter API KEY: "))
+api_hash = input("Enter API HASH: ")
 
-print('Required pyrogram V2 or greater.')
-API_KEY = int(input("Enter API KEY: "))
-API_HASH = input("Enter API HASH: ")
-with Client(name='USS', api_id=API_KEY, api_hash=API_HASH, in_memory=True) as app:
-    print(app.export_session_string())
+app = Client("Anything", api_id=api_id, api_hash=api_hash)
+with app:
+ x = app.export_session_string()
+ print(x)
